@@ -14,3 +14,15 @@ ul {
   gap: 1vw;
   align-items: center;
 }
+
+.d4-card {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.d4-card-group {
+  display: flex;
+  gap: 1vw;
+  flex: 1;
+}
