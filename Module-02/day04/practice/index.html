@@ -7,24 +7,40 @@
     <title>Document</title>
   </head>
   <body>
-    <!-- Build a navbar with Flexbox: a logo on the left and three links plus a button on the right,
-vertically centered, using justify-content: space-between. -->
-    <nav>
+    <nav class="navbar">
       <h1>logo</h1>
-      <div class="right-section-nav-bar">
-        <ul>
-          <li>Home</li>
-          <li>Contact</li>
-          <li>About</li>
-        </ul>
-        <button>Sign up</button>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">About</a>
       </div>
     </nav>
-    <section class="d4-card-group">
-      <div class="d4-card"></div>
-      <div class="d4-card"></div>
-      <div class="d4-card"></div>
-      <div class="d4-card"></div>
-    </section>
+
+    <main>
+      <h2 class="title">Simple Menu</h2>
+      <section class="menu">
+        <article class="card popular">
+          <span class="badge">Popular</span>
+          <h3>Chicken Burger</h3>
+          <p>Grilled chicken and sauce.</p>
+          <strong class="price">$18</strong>
+        </article>
+        <article class="card">
+          <h3>Veggie Pasta</h3>
+          <p>Pasta with vegetables.</p>
+          <strong class="price">$16</strong>
+        </article>
+        <article class="card">
+          <h3>Rice Bowl</h3>
+          <p>Rice with salmon.</p>
+          <strong class="price">$20</strong>
+        </article>
+        <article class="card">
+          <h3>Fruit Salad</h3>
+          <p>Fresh fruit mix.</p>
+          <strong class="price">$14</strong>
+        </article>
+      </section>
+    </main>
   </body>
 </html>
