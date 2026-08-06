@@ -3,13 +3,106 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Custom Properties</title>
+    <title>Day 03 Practice</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="card content-box">Content Box</div>
+    <main class="page">
+      <section class="demo">
+        <h1>Day 03 Practice</h1>
+        <p>
+          Simple examples for CSS variables, box sizing, specificity, tables,
+          and colors.
+        </p>
+      </section>
 
-    <div class="card border-box">Border Box</div>
-    <button class="btn">Click Me</button>
+      <section class="demo">
+        <h2>1. CSS Variables Button</h2>
+        <button class="btn">Click Me</button>
+      </section>
+
+      <section class="demo">
+        <h2>2. Box Sizing</h2>
+        <div class="card content-box">Content Box card</div>
+        <div class="card border-box">Border Box card</div>
+        <p class="note">
+          With content-box the total width becomes bigger than 300px. With
+          border-box it stays 300px.
+        </p>
+      </section>
+
+      <section class="demo">
+        <h2>3. Specificity</h2>
+        <p id="special-text" class="text note-text">
+          This paragraph is targeted by an element rule, a class rule, and an ID
+          rule.
+        </p>
+        <p class="note">
+          ID wins because it has the highest specificity. Scores: element =
+          0,0,1; class = 0,1,0; ID = 1,0,0.
+        </p>
+      </section>
+
+      <section class="demo">
+        <h2>4. Ethiopian Airlines Schedule</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Flight</th>
+              <th>Route</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ET100</td>
+              <td>Addis Ababa - Nairobi</td>
+              <td>08:00</td>
+            </tr>
+            <tr>
+              <td>ET101</td>
+              <td>Addis Ababa - Dubai</td>
+              <td>09:30</td>
+            </tr>
+            <tr>
+              <td>ET102</td>
+              <td>Addis Ababa - London</td>
+              <td>12:00</td>
+            </tr>
+            <tr>
+              <td>ET103</td>
+              <td>Addis Ababa - Cairo</td>
+              <td>14:15</td>
+            </tr>
+            <tr>
+              <td>ET104</td>
+              <td>Addis Ababa - Kampala</td>
+              <td>16:45</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="demo">
+        <h2>5. Colors</h2>
+        <div class="colors">
+          <div class="color-box color-1">
+            <h3>#1d4ed8</h3>
+            <p>rgb(29, 78, 216)</p>
+            <p>hsl(222, 76%, 48%)</p>
+          </div>
+          <div class="color-box color-2">
+            <h3>#ea580c</h3>
+            <p>rgb(234, 88, 12)</p>
+            <p>hsl(20, 91%, 48%)</p>
+          </div>
+          <div class="color-box color-3">
+            <h3>#16a34a</h3>
+            <p>rgb(22, 163, 74)</p>
+            <p>hsl(142, 76%, 36%)</p>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

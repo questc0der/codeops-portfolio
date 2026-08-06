@@ -1,29 +1,55 @@
 :root {
-  --primary-color: #2563eb;
-  --secondary-color: #ffffff;
-  --spacing: 16px;
-  --font-stack: Arial, Helvetica, sans-serif;
+  --blue: #1d4ed8;
+  --white: #ffffff;
+  --space: 16px;
+  --font: Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: #f4f6f8;
+  color: #1f2937;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.demo {
+  margin-bottom: 20px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #dbe2ea;
+}
+
+.demo h1,
+.demo h2,
+.demo h3,
+.demo p {
+  margin-top: 0;
 }
 
 .btn {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  padding: var(--spacing);
-  font-family: var(--font-stack);
-  border: none;
+  background: var(--blue);
+  color: var(--white);
+  padding: var(--space);
+  font-family: var(--font);
+  border: 0;
   border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
 }
 
-.btn:hover {
-  opacity: 0.9;
-}
 .card {
   width: 300px;
   padding: 24px;
-  border: 2px solid black;
-  margin-bottom: 20px;
+  border: 2px solid #000;
+  margin-bottom: 12px;
 }
 
 .content-box {
@@ -32,4 +58,78 @@
 
 .border-box {
   box-sizing: border-box;
+}
+
+.text {
+  color: #6b7280;
+}
+
+p {
+  color: #2563eb;
+}
+
+#special-text {
+  color: #dc2626;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  text-align: left;
+}
+
+thead tr {
+  background: #1d4ed8;
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background: #eef2ff;
+}
+
+.colors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.color-box {
+  padding: 16px;
+  border-radius: 8px;
+  color: #fff;
+  transition: background-color 0.2s;
+}
+
+.color-1 {
+  background: hsl(222, 76%, 48%);
+}
+
+.color-1:hover {
+  background: hsl(222, 76%, 58%);
+}
+
+.color-2 {
+  background: hsl(20, 91%, 48%);
+}
+
+.color-2:hover {
+  background: hsl(20, 91%, 58%);
+}
+
+.color-3 {
+  background: hsl(142, 76%, 36%);
+}
+
+.color-3:hover {
+  background: hsl(142, 76%, 46%);
+}
+
+.note {
+  color: #4b5563;
 }
