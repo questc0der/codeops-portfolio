@@ -8,59 +8,130 @@ body {
   background: #f5f5f5;
 }
 
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.demo {
+  margin-bottom: 24px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+.demo h2 {
+  margin: 0 0 12px;
+}
+
 .navbar {
   position: sticky;
   top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
-  background: #fff;
+  padding: 12px;
+  background: #eee;
 }
 
 .nav-links {
   display: flex;
   gap: 12px;
+  flex-wrap: wrap;
 }
 
 .nav-links a {
-  color: #000;
   text-decoration: none;
+  color: #000;
 }
 
-.title {
-  margin: 24px 16px 12px;
-}
-
-.menu {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-  padding: 0 16px 16px;
-}
-
-.card {
-  position: relative;
+.cards-row {
   display: flex;
-  flex-direction: column;
-  min-height: 160px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.box {
+  flex: 1;
+  min-width: 150px;
+  padding: 24px 12px;
+  text-align: center;
+  background: #dfe9f7;
+  border: 1px solid #c8d6ea;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.photo {
+  min-height: 120px;
+  display: grid;
+  place-items: center;
+  background: #f2d9c7;
+  border: 1px solid #e0bfa2;
+}
+
+.layout-page {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "sidebar"
+    "main"
+    "footer";
+  gap: 12px;
+}
+
+.header {
+  grid-area: header;
+}
+.sidebar {
+  grid-area: sidebar;
+}
+.main-area {
+  grid-area: main;
+  min-height: 120px;
+}
+.footer {
+  grid-area: footer;
+}
+
+.area {
   padding: 16px;
+  background: #e8efe7;
+  border: 1px solid #cfd8cf;
+}
+
+.product-card {
+  position: relative;
+  max-width: 280px;
+  padding: 20px;
   background: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
 }
 
-.price {
-  margin-top: auto;
-  padding-top: 12px;
-  font-weight: 700;
+.product-card strong {
+  display: block;
+  margin-top: 12px;
 }
 
-.badge {
+.sale-badge {
   position: absolute;
   top: 10px;
   right: 10px;
-  padding: 4px 8px;
-  background: #000;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #d94f4f;
   color: #fff;
-  font-size: 12px;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 701px) {
+  .layout-page {
+    grid-template-areas: "header header" "sidebar main" "footer footer";
+    grid-template-columns: 180px 1fr;
+  }
 }
