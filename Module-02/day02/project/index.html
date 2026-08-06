@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Reservations page for Habesha Eatery in Bole, Addis Ababa."
+    />
+    <title>Reservations — Habesha Eatery, Bole</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Habesha Eatery</h1>
+      <p>Reservations page</p>
+    </header>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Reservations</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <main class="page">
+      <section class="card" aria-labelledby="reservation-title">
+        <h2 id="reservation-title">Reserve a table</h2>
+        <form action="#" method="post">
+          <!-- POST is used because this form sends reservation data to the restaurant. -->
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+
+          <div class="field">
+            <label for="tel">Tel</label>
+            <input
+              id="tel"
+              name="tel"
+              type="tel"
+              placeholder="09xxxxxxxx"
+              pattern="09[0-9]{8}"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="guests">Guests</label>
+            <input
+              id="guests"
+              name="guests"
+              type="number"
+              min="1"
+              max="20"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="date">Date</label>
+            <input id="date" name="date" type="date" required />
+          </div>
+
+          <button type="submit">Book table</button>
+        </form>
+      </section>
+
+      <section class="card" aria-labelledby="menu-title">
+        <h2 id="menu-title">ETB menu</h2>
+        <table>
+          <caption>
+            Habesha Eatery menu prices
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Item</th>
+              <th scope="col">Description</th>
+              <th scope="col">Price ETB</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Shiro</td>
+              <td>Soft chickpea stew</td>
+              <td>180</td>
+            </tr>
+            <tr>
+              <td>Tibs</td>
+              <td>Pan-fried beef with spices</td>
+              <td>320</td>
+            </tr>
+            <tr>
+              <td>Doro Wot</td>
+              <td>Chicken stew with egg</td>
+              <td>290</td>
+            </tr>
+            <tr>
+              <td>Kita</td>
+              <td>Flatbread with honey</td>
+              <td>120</td>
+            </tr>
+            <tr>
+              <td>Spiced Tea</td>
+              <td>Warm tea with herbs</td>
+              <td>60</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card" aria-labelledby="media-title">
+        <h2 id="media-title">About our place</h2>
+        <figure>
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='420' viewBox='0 0 800 420'%3E%3Crect width='800' height='420' fill='%23fae8d4'/%3E%3Crect x='140' y='120' width='520' height='180' rx='24' fill='%23a16207'/%3E%3Crect x='210' y='165' width='120' height='90' rx='12' fill='%23fff7ed'/%3E%3Crect x='470' y='165' width='120' height='90' rx='12' fill='%23fff7ed'/%3E%3Ctext x='400' y='95' text-anchor='middle' font-family='Arial' font-size='34' fill='%239a3412'%3EHabesha Eatery%3C/text%3E%3C/svg%3E"
+            alt="Simple illustration of Habesha Eatery in Addis Ababa"
+          />
+          <figcaption>
+            Our fictional restaurant in Bole, Addis Ababa.
+          </figcaption>
+        </figure>
+
+        <iframe
+          title="Map of Bole, Addis Ababa"
+          src="https://www.google.com/maps?q=Bole%20Addis%20Ababa&output=embed"
+          loading="lazy"
+        ></iframe>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Bole, Addis Ababa</p>
+    </footer>
+  </body>
+</html>
