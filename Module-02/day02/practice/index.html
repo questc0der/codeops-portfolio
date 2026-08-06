@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Beginner HTML practice page with a registration form, table, media block, accessibility fixes, and basic page head setup."
+    />
+    <title>Ethio Telecom Practice Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <h1>Ethio Telecom Service</h1>
+        <p>Simple form for a fictional service.</p>
+
+        <!-- POST is used because this form sends data to a server. -->
+        <form class="form" action="#" method="post">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="tel">Tel</label>
+          <input
+            id="tel"
+            name="tel"
+            type="tel"
+            inputmode="tel"
+            placeholder="+251912345678"
+            pattern="\+251[0-9]{9}"
+            required
+          />
+
+          <label for="branch">Branch</label>
+          <select id="branch" name="branch" required>
+            <option value="">Choose a branch</option>
+            <option value="bole">Bole</option>
+            <option value="kazanchis">Kazanchis</option>
+            <option value="piassa">Piassa</option>
+          </select>
+
+          <button type="submit">Register</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Ethiopian Airlines Flight Table</h2>
+        <table>
+          <caption>
+            Five-row flight schedule
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Flight</th>
+              <th scope="col">From</th>
+              <th scope="col">To</th>
+              <th scope="col">Departs</th>
+              <th scope="col">Price ETB</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ET101</td>
+              <td>Addis Ababa</td>
+              <td>Nairobi</td>
+              <td>08:00</td>
+              <td>18,500</td>
+            </tr>
+            <tr>
+              <td>ET202</td>
+              <td>Addis Ababa</td>
+              <td>Dubai</td>
+              <td>10:30</td>
+              <td>42,000</td>
+            </tr>
+            <tr>
+              <td>ET303</td>
+              <td>Addis Ababa</td>
+              <td>Cairo</td>
+              <td>12:15</td>
+              <td>24,800</td>
+            </tr>
+            <tr>
+              <td>ET404</td>
+              <td>Addis Ababa</td>
+              <td>London</td>
+              <td>15:40</td>
+              <td>78,300</td>
+            </tr>
+            <tr>
+              <td>ET505</td>
+              <td>Addis Ababa</td>
+              <td>Kampala</td>
+              <td>18:20</td>
+              <td>16,900</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>Media Block</h2>
+        <figure>
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='420' viewBox='0 0 800 420'%3E%3Crect width='800' height='420' fill='%23dbeafe'/%3E%3Crect x='120' y='150' width='560' height='120' rx='20' fill='%231d4ed8'/%3E%3Ccircle cx='240' cy='190' r='36' fill='%23fff'/%3E%3Cpath d='M330 225c24-54 86-54 110 0' stroke='%23fff' stroke-width='12' fill='none' stroke-linecap='round'/%3E%3Ctext x='400' y='100' text-anchor='middle' font-family='Arial' font-size='34' fill='%231e3a8a'%3EBole Coffee House%3C/text%3E%3C/svg%3E"
+            alt="A simple illustration of the Bole Coffee House storefront"
+          />
+          <figcaption>A fictional cafe in Addis Ababa.</figcaption>
+        </figure>
+
+        <iframe
+          title="Map of Addis Ababa"
+          src="https://www.google.com/maps?q=Addis%20Ababa&output=embed"
+          loading="lazy"
+        ></iframe>
+      </section>
+
+      <section class="card">
+        <h2>Accessibility Fixes</h2>
+        <!-- Button helps keyboard users, label helps screen readers, alt text helps non-visual users. -->
+        <button type="button">Open menu</button>
+        <label for="search">Search</label>
+        <input id="search" name="search" type="text" />
+        <img
+          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='180' viewBox='0 0 320 180'%3E%3Crect width='320' height='180' fill='%23fed7aa'/%3E%3Ctext x='160' y='95' text-anchor='middle' font-family='Arial' font-size='24' fill='%239a3412'%3ESimple shop sign%3C/text%3E%3C/svg%3E"
+          alt="A simple shop sign illustration"
+        />
+      </section>
+    </main>
+  </body>
+</html>
