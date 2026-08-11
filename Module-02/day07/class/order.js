@@ -30,5 +30,12 @@ const toETB = (n) => n.toFixed(2);
  * Inside, it should pre-build a 10% member discount function using discountBy(0.10).
  */
 function makeReceiptMaker() {
-  return function () {};
+  let sequence = 0;
+  return function (prices, discountRate = 0) {
+    sequence += 1;
+    const base = subtotal(...prices);
+    const discounted = discountBy(discountRate)(base);
+    const finalAmount = toETB(withVat(discounted));
+    return `#${sequence}: ${finalAmount} ETB`;
+  };
 }
