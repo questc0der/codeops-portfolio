@@ -22,7 +22,7 @@ const withVat = (n) => n * 1.15;
  * Add toETB as a small pure helper.
  * It should format a number to 2 decimal places followed by " ETB".
  */
-const toETB = (n) => {};
+const toETB = (n) => n.toFixed(2);
 
 /**
  * Build makeReceiptMaker() with a private order number.
