@@ -1,0 +1,11 @@
+.dish-container {
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+  height: 20vh;
+  width: 20vw;
+}
+
+img {
+  height: 60%;
+}

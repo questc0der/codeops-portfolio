@@ -1,12 +1,14 @@
 import { useState } from "react";
-import "./App.css";
+import Header from "./components/Header/Header.jsx";
+import Menu from "./components/Menu/Menu.jsx";
+import Footer from "./components/Footer/Footer";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <h1>Welcome to React</h1>
+      <Header />
+      <Menu />
+      <Footer />
     </>
   );
 }

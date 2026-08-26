@@ -1,0 +1,21 @@
+.sidebar-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar {
+  background-color: yellow;
+  text-align: center;
+  width: 30vw;
+  height: 80vh;
+}
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: yellow;
+  text-align: center;
+  width: 65vw;
+  height: 80vh;
+}
