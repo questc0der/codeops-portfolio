@@ -1,11 +1,68 @@
-.dish-card { background: #fff; border: 1px solid #e5e6df; padding: 10px; }
-.dish-card > img { width: 100%; aspect-ratio: 1.25; object-fit: cover; display: block; }
-.dish-details { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 18px 8px 14px; }
-.dish-details h2 { font: 500 21px "Playfair Display", serif; letter-spacing: 0; margin: 4px 0 0; }
-.dish-details > strong { color: #e36f4b; font-size: 15px; }
-.dish-category { color: #9a9f98; font-size: 10px; letter-spacing: .1em; margin: 0; text-transform: uppercase; }
-.dish-actions { align-items: center; display: flex; gap: 10px; padding: 0 8px 8px; }
-.dish-actions button, .cart-item-actions button { background: #f0f1eb; border: 0; border-radius: 50%; color: #23302a; height: 30px; width: 30px; }
-.dish-actions .add-button { background: #23302a; border-radius: 3px; color: #fff; flex: 1; height: 38px; width: auto; }
-.dish-actions span { font-size: 14px; font-weight: 700; }
-.dish-actions button:hover, .cart-item-actions button:hover { background: #e36f4b; color: #fff; }
+.dish-card {
+  background: #fff;
+  border: 1px solid #e5e6df;
+  padding: 10px;
+}
+.dish-card > img {
+  width: 100%;
+  aspect-ratio: 1.25;
+  object-fit: cover;
+  display: block;
+}
+.dish-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 18px 8px 14px;
+}
+.dish-details h2 {
+  font:
+    500 21px "Playfair Display",
+    serif;
+  letter-spacing: 0;
+  margin: 4px 0 0;
+}
+.dish-details > strong {
+  color: #e36f4b;
+  font-size: 15px;
+}
+.dish-category {
+  color: #9a9f98;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  margin: 0;
+  text-transform: uppercase;
+}
+.dish-actions {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  padding: 0 8px 8px;
+}
+.dish-actions button,
+.cart-item-actions button {
+  background: #f0f1eb;
+  border: 0;
+  border-radius: 50%;
+  color: #23302a;
+  height: 30px;
+  width: 30px;
+}
+.dish-actions .add-button {
+  background: #23302a;
+  border-radius: 3px;
+  color: #fff;
+  flex: 1;
+  height: 38px;
+  width: auto;
+}
+.dish-actions span {
+  font-size: 14px;
+  font-weight: 700;
+}
+.dish-actions button:hover,
+.cart-item-actions button:hover {
+  background: #e36f4b;
+  color: #fff;
+}
