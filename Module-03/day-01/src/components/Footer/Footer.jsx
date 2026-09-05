@@ -2,9 +2,7 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <>
-      <h1 className="footer">Footer</h1>
-    </>
+    <footer className="footer">Seasonal plates, thoughtfully prepared.</footer>
   );
 }
 

@@ -1,4 +1,12 @@
 .footer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 22px 32px 36px;
+  color: #949a92;
+  font-size: 12px;
+  border-top: 1px solid #deded7;
+}
+.footer {
   background-color: yellow;
   text-align: center;
 }

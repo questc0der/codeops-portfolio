@@ -1,4 +1,14 @@
 .header {
-  text-align: center;
-  background-color: yellow;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  border-bottom: 1px solid #deded7;
 }
+.brand { color: #23302a; font: 600 30px "Playfair Display", serif; text-decoration: none; letter-spacing: 0; }
+.brand span { color: #e36f4b; }
+.location, .header-mark { color: #7c837c; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+.header-mark { margin-left: auto; color: #23302a; }
+.header-mark b { color: #e36f4b; font-weight: 500; }

@@ -1,21 +1,60 @@
-.sidebar-main {
-  display: flex;
-  justify-content: space-between;
+.menu-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 64px;
+  padding-top: 68px;
 }
-
-.sidebar {
-  background-color: yellow;
-  text-align: center;
-  width: 30vw;
-  height: 80vh;
+.menu-intro {
+  max-width: 680px;
 }
-
-.main {
+.eyebrow {
+  color: #e36f4b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin: 0 0 14px;
+  text-transform: uppercase;
+}
+.menu-intro h1 {
+  font:
+    600 clamp(40px, 5vw, 70px)/0.98 "Playfair Display",
+    serif;
+  letter-spacing: 0;
+  margin: 0 0 20px;
+  max-width: 620px;
+}
+.menu-intro > p:last-child {
+  color: #778078;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 450px;
+}
+.category-row {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
-  background-color: yellow;
-  text-align: center;
-  width: 65vw;
-  height: 80vh;
+  gap: 10px;
+  margin: 46px 0 28px;
+}
+.category-button {
+  background: transparent;
+  border: 1px solid #d7d9d1;
+  border-radius: 99px;
+  color: #7c837c;
+  padding: 10px 19px;
+  transition: 0.2s ease;
+}
+.category-button:hover,
+.category-button.active {
+  background: #23302a;
+  border-color: #23302a;
+  color: #fff;
+}
+.status-message {
+  color: #e36f4b;
+  font-size: 13px;
+}
+.dish-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
 }
