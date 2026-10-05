@@ -13,6 +13,20 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 - `/checkout` is dynamic because it reads the request-specific `pickup-time` cookie.
 - `/`, `/cart`, and `/_not-found` are static.
 
+### Menu JavaScript measurement
+
+Next.js 16.3.8 does not print the older per-route `First Load JS` table. The
+same build artifact measurement was used before and after this refactor:
+
+- Before: 584,691 bytes of emitted client JavaScript.
+- After: 584,754 bytes of emitted client JavaScript.
+
+The menu data fetch and `DishList` stay on the server. The 63-byte increase is
+the small cost of the required interactive `FilterShell` and isolated cart
+provider; the previous app did not contain a client filter or cart provider to
+remove. The unused client navigation button was removed so navigation now uses
+a server-rendered `Link`.
+
 ## Getting Started
 
 First, run the development server:

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import GoToMenuButton from "./GoToMenuButton";
 
 export default function Home() {
   return (
@@ -20,7 +19,9 @@ export default function Home() {
           afternoon disappear.
         </p>
         <div className="hero-actions">
-          <GoToMenuButton />
+          <Link className="button button-dark" href="/menu">
+            Explore the menu
+          </Link>
           <Link className="text-link" href="/checkout">
             Plan a pickup
           </Link>

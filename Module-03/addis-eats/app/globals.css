@@ -1,142 +1,170 @@
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-	background: #f5efe6;
+  background: #f5efe6;
 }
 
 body {
-	margin: 0;
-	color: #2b211b;
-	background: #f5efe6;
-	font-family: Georgia, "Times New Roman", serif;
+  margin: 0;
+  color: #2b211b;
+  background: #f5efe6;
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 a {
-	color: inherit;
+  color: inherit;
 }
 
 .menu-layout {
-	display: grid;
-	grid-template-columns: 220px minmax(0, 1fr);
-	min-height: calc(100vh - 120px);
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  min-height: calc(100vh - 120px);
 }
 
 .menu-sidebar {
-	padding: 48px 24px;
-	border-right: 1px solid #d8cabb;
+  padding: 48px 24px;
+  border-right: 1px solid #d8cabb;
 }
 
 .sidebar-label,
 .eyebrow,
 .dish-kicker {
-	margin: 0 0 12px;
-	color: #8b4b2b;
-	font-size: 0.75rem;
-	letter-spacing: 0.08em;
-	text-transform: uppercase;
+  margin: 0 0 12px;
+  color: #8b4b2b;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .category-bar {
-	display: grid;
-	gap: 12px;
+  display: grid;
+  gap: 12px;
 }
 
 .category {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .category.active,
 .category:hover {
-	color: #b4472e;
+  color: #b4472e;
 }
 
 .menu-content {
-	min-width: 0;
+  min-width: 0;
 }
 
 .page-shell {
-	max-width: 760px;
-	padding: 64px clamp(24px, 8vw, 112px);
+  max-width: 760px;
+  padding: 64px clamp(24px, 8vw, 112px);
 }
 
 .page-shell h1 {
-	margin: 0 0 16px;
-	font-size: clamp(2.5rem, 6vw, 5rem);
-	line-height: 0.95;
+  margin: 0 0 16px;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 0.95;
 }
 
 .lede {
-	max-width: 520px;
-	font-size: 1.2rem;
-	line-height: 1.5;
+  max-width: 520px;
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 .dish-list {
-	display: grid;
-	gap: 1px;
-	margin: 48px 0;
-	background: #d8cabb;
+  display: grid;
+  gap: 1px;
+  margin: 48px 0;
+  background: #d8cabb;
+}
+
+.filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 32px 0 -24px;
+}
+
+.filter {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid #d8cabb;
+  cursor: pointer;
+}
+
+.filter input {
+  position: absolute;
+  opacity: 0;
+}
+
+.filter:has(input:checked),
+.filter:hover {
+  color: #f5efe6;
+  background: #b4472e;
+}
+
+.filter-shell:has(input[value="vegetarian"]:checked)
+  .dish-row:not([data-filter-category="vegetarian"]),
+.filter-shell:has(input[value="signature"]:checked)
+  .dish-row:not([data-filter-category="signature"]),
+.filter-shell:has(input[value="coffee"]:checked)
+  .dish-row:not([data-filter-category="coffee"]) {
+  display: none;
 }
 
 .dish-row {
-	display: flex;
-	justify-content: space-between;
-	gap: 24px;
-	padding: 24px;
-	background: #f5efe6;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px;
+  background: #f5efe6;
 }
 
 .dish-row h2 {
-	margin: 0 0 8px;
+  margin: 0 0 8px;
 }
 
 .dish-action {
-	display: grid;
-	align-content: space-between;
-	justify-items: end;
-	white-space: nowrap;
+  display: grid;
+  align-content: space-between;
+  justify-items: end;
+  white-space: nowrap;
 }
 
 .small-link,
 .text-link {
-	color: #b4472e;
-}
-
-.loading-copy {
-	margin: 0;
-	padding: 24px;
-	background: #eee3d5;
+  color: #b4472e;
 }
 
 @media (max-width: 700px) {
-	.menu-layout {
-		display: block;
-	}
+  .menu-layout {
+    display: block;
+  }
 
-	.menu-sidebar {
-		padding: 24px;
-		border-right: 0;
-		border-bottom: 1px solid #d8cabb;
-	}
+  .menu-sidebar {
+    padding: 24px;
+    border-right: 0;
+    border-bottom: 1px solid #d8cabb;
+  }
 
-	.category-bar {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 16px;
-	}
+  .category-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
 
-	.page-shell {
-		padding: 40px 24px;
-	}
+  .page-shell {
+    padding: 40px 24px;
+  }
 
-	.dish-row {
-		display: grid;
-	}
+  .dish-row {
+    display: grid;
+  }
 
-	.dish-action {
-		display: flex;
-		justify-content: space-between;
-	}
+  .dish-action {
+    display: flex;
+    justify-content: space-between;
+  }
 }

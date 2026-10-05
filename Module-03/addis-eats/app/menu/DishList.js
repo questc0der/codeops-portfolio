@@ -1,15 +1,14 @@
 import Link from "next/link";
 
-export default async function DishList() {
-  const response = await fetch(
-    "https://addis-eats-backend.onrender.com/menu/specials",
-  );
-  const data = await response.json();
-  console.log(data);
+export default function DishList({ dishes }) {
   return (
     <section className="dish-list">
-      {data.data.map((dish) => (
-        <article className="dish-row" key={dish.id}>
+      {dishes.map((dish) => (
+        <article
+          className="dish-row"
+          data-filter-category={getFilterCategory(dish.category)}
+          key={dish.id}
+        >
           <div>
             <p className="dish-kicker">{dish.id}</p>
             <h2>{dish.nameEn}</h2>
@@ -25,4 +24,24 @@ export default async function DishList() {
       ))}
     </section>
   );
+}
+
+function getFilterCategory(category) {
+  if (category.includes("Vegan") || category.includes("Fasting")) {
+    return "vegetarian";
+  }
+
+  if (
+    category.includes("Tibs") ||
+    category.includes("Kitfo") ||
+    category.includes("Stews")
+  ) {
+    return "signature";
+  }
+
+  if (category.includes("Beverages")) {
+    return "coffee";
+  }
+
+  return "all";
 }

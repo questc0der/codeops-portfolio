@@ -9,7 +9,9 @@ export default function CategoryBar() {
         <Link
           className={index === 0 ? "category active" : "category"}
           key={category}
-          href={index === 0 ? "/menu" : `/menu?category=${category.toLowerCase()}`}
+          href={
+            index === 0 ? "/menu" : `/menu?category=${category.toLowerCase()}`
+          }
         >
           {category}
         </Link>
