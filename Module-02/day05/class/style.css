@@ -1,0 +1,78 @@
+.menu-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-page h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.menu-page__text {
+  margin: 0 0 20px;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.menu__card h2,
+.menu__card p,
+.menu__card span {
+  margin: 0;
+}
+
+.menu__card {
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.menu__card h2 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.menu__card p {
+  margin-bottom: 10px;
+}
+
+.menu__card span {
+  font-weight: 700;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .menu__card:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  }
+}
+
+@media (min-width: 768px) {
+  .menu {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu__card {
+    transition: none;
+  }
+
+  .menu__card:hover {
+    transform: none;
+  }
+}

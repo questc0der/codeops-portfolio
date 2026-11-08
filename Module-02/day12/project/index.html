@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ETB Converter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-100 text-slate-800">
+    <div
+      class="max-w-md mx-auto my-10 rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200"
+    >
+      <h1 class="text-xl font-bold mb-3">ETB Currency Converter</h1>
+      <p
+        id="status"
+        class="mb-4 rounded-md bg-blue-50 px-3 py-2 text-sm text-blue-700"
+      >
+        Loading rates...
+      </p>
+
+      <form id="converter-form" class="space-y-4">
+        <div>
+          <label for="amount" class="mb-1 block text-sm font-medium"
+            >Amount in ETB</label
+          >
+          <input
+            id="amount"
+            type="number"
+            min="0"
+            step="0.01"
+            value="100"
+            class="w-full rounded-md border border-slate-300 px-3 py-2 outline-none focus:border-blue-500"
+          />
+        </div>
+
+        <div>
+          <label for="currency" class="mb-1 block text-sm font-medium"
+            >Currency</label
+          >
+          <select
+            id="currency"
+            class="w-full rounded-md border border-slate-300 px-3 py-2 outline-none focus:border-blue-500"
+          ></select>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full rounded-md bg-blue-600 px-4 py-2 font-medium text-white hover:bg-blue-700"
+        >
+          Convert
+        </button>
+      </form>
+
+      <div
+        id="result"
+        class="mt-5 rounded-md bg-slate-50 px-3 py-3 text-lg font-semibold"
+      >
+        Result will appear here.
+      </div>
+
+      <div class="mt-6">
+        <h2 class="mb-2 text-lg font-semibold">Watchlist</h2>
+        <div class="flex gap-2">
+          <select
+            id="watchlist-select"
+            class="flex-1 rounded-md border border-slate-300 px-3 py-2 outline-none"
+          ></select>
+          <button
+            id="add-watchlist-btn"
+            type="button"
+            class="rounded-md bg-slate-800 px-3 py-2 text-white hover:bg-slate-900"
+          >
+            Add
+          </button>
+        </div>
+        <ul id="watchlist-list" class="mt-3 space-y-2"></ul>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

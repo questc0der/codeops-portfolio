@@ -1,0 +1,8 @@
+.app-shell {
+  min-height: 100vh;
+}
+.app-main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px 64px;
+}
