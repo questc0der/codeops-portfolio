@@ -4,8 +4,8 @@ import (
     "errors"
     "fmt"
 
-    "restaurant/internal/delivery"
-    "restaurant/internal/menu"
+    "example.com/m/internal/delivery"
+    "example.com/m/internal/menu"
 )
 
 var ErrEmptyOrder = errors.New("order is empty")
